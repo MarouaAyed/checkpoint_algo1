@@ -1,0 +1,25 @@
+ALGORITHM algorithm1
+VAR
+    c:CHAR:="";  
+    nbre_car:INTEGER:=0;
+    nbre_espace:INTEGER:=0;
+    nbre_voyelles:=0;
+
+BEGIN
+
+    WHILE (c<>".") DO
+        write("donnez un caratére");
+        read(c);
+        nbre_car:=nbre_car+1;
+            IF (c=" ") THEN
+                nbre_espace:=nbre_espace+1;
+            END_IF
+            IF (c="a") or (c="e") or (c="i") or (c="o") or (c="u") or (c="y") THEN
+                nbre_voyelles:=nbre_voyelles+1;
+            END_IF
+    END_WHILE
+    write(nbre_car);
+    write(nbre_voyelles);
+    write(nbre_espace);
+
+END
